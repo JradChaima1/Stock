@@ -37,9 +37,10 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/styles.css"
             ],
-            "scripts": [],
+            "scripts": ["src/assets/myscript.js"],
             "server": "src/main.server.ts",
             "prerender": true,
             "ssr": {
@@ -102,12 +103,16 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/styles.css"
             ],
             "scripts": []
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "40c42c7a-105b-417b-9fcc-b48aaa209931"
   }
 }

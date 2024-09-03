@@ -1,0 +1,31 @@
+<div class="max-w-4xl mx-auto p-6">
+
+    <h2 class="mb-5 text-gray-900 font-mono font-bold text-xl">S'inscrire</h2>
+    <form>
+      <div class="grid sm:grid-cols-2 gap-8">
+      <input type="text" class="w-full px-6 py-3 mb-2 border border-slate-600 rounded-lg font-medium " placeholder="Nom" value=""/>
+      <input type="text" class="w-full px-6 py-3 mb-2 border border-slate-600 rounded-lg font-medium " placeholder="Code fiscal" value=""/>
+      <input type="email" class="w-full px-6 py-3 mb-2 border border-slate-600 rounded-lg font-medium " placeholder="Email" value=""/>
+      <input type="text" class="w-full px-6 py-3 mb-2 border border-slate-600 rounded-lg font-medium " placeholder="Adresse 1" value=""/>
+      <input type="text" class="w-full px-6 py-3 mb-2 border border-slate-600 rounded-lg font-medium " placeholder="Adresse 2" value=""/>
+      <input type="text" class="w-full px-6 py-3 mb-2 border border-slate-600 rounded-lg font-medium " placeholder="Ville" value=""/>
+      <input type="text" class="w-full px-6 py-3 mb-2 border border-slate-600 rounded-lg font-medium " placeholder="Code postal" value=""/>
+      <input type="text" class="w-full px-6 py-3 mb-2 border border-slate-600 rounded-lg font-medium " placeholder="Pays" value=""/>
+      <input type="password" class="w-full px-6 py-3 mb-2 border border-slate-600 rounded-lg font-medium " placeholder="" value="Mot de passe"/>
+      <input type="password" class="w-full px-6 py-3 mb-2 border border-slate-600 rounded-lg font-medium " placeholder="" value="Confirmer mot de passe"/>
+    </div>
+      <div class="!mt-12">
+      <button class="bg-slate-500 hover:bg-slate-700 text-white text-base rounded-lg py-2.5 px-5 transition-colors text-[19px]">S'inscrire</button>
+      </div>
+    </form>
+  <p class="text-center mt-3 text-[14px]">Already  have an account?
+    <a [routerLink]="['/login']" class="text-gray-600">Sign in</a>
+
+  <p class="text-center mt-3 text-[14px]">By clicking continue, you agree to our
+    <a href="/terms" class="text-gray-600">Terms of Service</a> and <a href="/privacy" class="text-gray-600">Privacy Policy</a>.
+  </p>
+
+</div>
+
+
+
