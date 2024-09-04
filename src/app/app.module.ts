@@ -12,6 +12,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import {MatIconModule} from "@angular/material/icon";
 import {MenuComponent} from "./composants/menu/menu.component";
 import { FormsModule } from '@angular/forms';
+import { HeaderComponent } from './composants/header/header.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FormsModule } from '@angular/forms';
     PageInscriptionComponent,
     PageDashboardComponent,
     PageStatistiquesComponent,
-    MenuComponent
+    MenuComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

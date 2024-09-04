@@ -6,9 +6,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-.card {
-  @apply bg-[theme('colors.red.50')] shadow-[theme('boxShadow.xl')] p-[theme('spacing.6')] rounded-[theme('borderRadius.lg')];
-}
+
 .menu-container {
   @apply w-[200px] text-xl;
   background: #04aa6d;
@@ -27,7 +25,7 @@
 
 /* Sidebar */
 .sidebar {
-  @apply w-[60px] lg:w-[240px] h-[calc(100vh-120px)] whitespace-nowrap fixed shadow overflow-x-hidden transition-all duration-500 ease-in-out
+  @apply  h-[calc(100vh-120px)] whitespace-nowrap fixed shadow  transition-all duration-500 ease-in-out
 
 }
 .sidebar.sidebar-close {
@@ -47,13 +45,14 @@
   @apply rounded-[3px];
 }
 .sidebar .nav-links {
-  @apply h-full w-[260px] overflow-auto pb-[150px];
+  @apply h-full md:w-[260px] w-[180px]   overflow-auto pb-[150px];
 }
 .sidebar .nav-links::-webkit-scrollbar {
   @apply hidden;
 }
 .sidebar .nav-links li {
   list-style: none;
+overflow-x: hidden;
 }
 .sidebar .nav-links > li {
   @apply relative w-fit;
@@ -96,7 +95,7 @@
 
 /* Link Name */
 .sidebar .nav-links li a .link_name {
-  @apply text-base font-semibold text-gray-500 transition-all duration-[0.4s] ease-[ease];
+  @apply md:text-base text-[15px] font-semibold text-gray-500 transition-all duration-[0.4s] ease-[ease];
 }
 .sidebar .nav-links li:hover a .link_name,
 .sidebar .nav-links li.active a .link_name {
@@ -108,15 +107,15 @@
 
 /* Sub Menu */
 .sidebar .nav-links li .sub-menu {
-  @apply hidden transition-all duration-[0.4s] ease-[ease] pl-[70px] pr-1.5 pt-1.5 pb-3.5 bg-white;
+  @apply hidden transition-all duration-[0.4s] ease-[ease] pl-[20px] pr-1.5 pt-1.5 pb-3.5 bg-white ;
   /* margin-top: -10px; */
 
 }
 .sidebar .nav-links li.showMenu .sub-menu {
-  @apply block;
+  @apply block ;
 }
 .sidebar .nav-links li .sub-menu a {
-  @apply text-[15px] whitespace-nowrap transition-all duration-[0.3s] ease-[ease] px-0 py-[7px];
+  @apply md:text-[15px] text-[9px]  transition-all duration-[0.3s] ease-[ease] px-0 py-[7px];
 }
 .sidebar .nav-links li .sub-menu li {
   @apply pl-2.5 text-gray-500 ;
