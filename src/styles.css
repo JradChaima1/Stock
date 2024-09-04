@@ -1,9 +1,192 @@
+/*
+  Based on TailwindCSS recommendations,
+  consider using classes instead of the `@apply` directive
+  @see https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
+*/
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 .card {
-  background-color: theme('colors.red.50');
-  border-radius: theme('borderRadius.lg');
-  padding: theme('spacing.6');
-  box-shadow: theme('boxShadow.xl');
+  @apply bg-[theme('colors.red.50')] shadow-[theme('boxShadow.xl')] p-[theme('spacing.6')] rounded-[theme('borderRadius.lg')];
+}
+.menu-container {
+  @apply w-[200px] text-xl;
+  background: #04aa6d;
+}
+.menu-toggler {
+  @apply p-2.5;
+}
+.menu {
+  @apply text-white p-2.5;
+  background: #333;
+}
+.menu-item {
+  @apply cursor-pointer px-0 py-[5px] hover:underline;
+}
+/* Hamburger Menu */
+
+/* Sidebar */
+.sidebar {
+  @apply w-[60px] lg:w-[240px] h-[calc(100vh-120px)] whitespace-nowrap fixed shadow overflow-x-hidden transition-all duration-500 ease-in-out
+
+}
+.sidebar.sidebar-close {
+  @apply w-[60px];
+}
+.sidebar .logo-details {
+  @apply w-full pt-5 pb-2.5 px-2.5;
+}
+
+/* .sidebar.sidebar-close .logo-details {
+  padding: 20px 10px;
+} */
+.sidebar .logo-details .logo {
+  @apply h-10 w-full bg-gray-900;
+}
+.sidebar.sidebar-close .logo-details .logo {
+  @apply rounded-[3px];
+}
+.sidebar .nav-links {
+  @apply h-full w-[260px] overflow-auto pb-[150px];
+}
+.sidebar .nav-links::-webkit-scrollbar {
+  @apply hidden;
+}
+.sidebar .nav-links li {
+  list-style: none;
+}
+.sidebar .nav-links > li {
+  @apply relative w-fit;
+}
+.sidebar .nav-links li:hover i,
+.sidebar .nav-links li.active i {
+
+}
+.sidebar .nav-links li:hover {
+  @apply bg-gray-100;
+}
+/* Dropdown Title */
+.sidebar .nav-links .dropdown-title {
+  @apply w-[260px] overflow-hidden transition-all duration-[0.52s] ease-[ease] flex items-center justify-between relative;
+  /* */
+}
+.sidebar.sidebar-close .nav-links .dropdown-title {
+  @apply w-[60px];
+}
+
+/* Dropdown Button */
+.sidebar .nav-links .dropdown-btn {
+  @apply flex items-center justify-between relative;
+}
+.sidebar .nav-links li i {
+  @apply h-[50px] min-w-[60px] text-center leading-[50px] text-gray-500 text-xl cursor-pointer transition-all duration-[0.3s] ease-[ease];
+}
+.sidebar .nav-links li:hover i,
+.sidebar .nav-links li.active i {
+
+}
+.sidebar .nav-links li.showMenu i.arrow {
+  @apply -rotate-180;
+}
+
+/* a Tag */
+.sidebar .nav-links li a {
+  @apply flex items-center no-underline w-full;
+}
+
+/* Link Name */
+.sidebar .nav-links li a .link_name {
+  @apply text-base font-semibold text-gray-500 transition-all duration-[0.4s] ease-[ease];
+}
+.sidebar .nav-links li:hover a .link_name,
+.sidebar .nav-links li.active a .link_name {
+  @apply text-gray-900;
+}
+.sidebar.sidebar-close .nav-links li a .link_name {
+  @apply pointer-events-none;
+}
+
+/* Sub Menu */
+.sidebar .nav-links li .sub-menu {
+  @apply hidden transition-all duration-[0.4s] ease-[ease] pl-[70px] pr-1.5 pt-1.5 pb-3.5 bg-white;
+  /* margin-top: -10px; */
+
+}
+.sidebar .nav-links li.showMenu .sub-menu {
+  @apply block;
+}
+.sidebar .nav-links li .sub-menu a {
+  @apply text-[15px] whitespace-nowrap transition-all duration-[0.3s] ease-[ease] px-0 py-[7px];
+}
+.sidebar .nav-links li .sub-menu li {
+  @apply pl-2.5 text-gray-500 ;
+}
+.sidebar .nav-links li .sub-menu li:hover,
+.sidebar .nav-links li .sub-menu li.active {
+  @apply bg-gray-900;
+}
+.sidebar .nav-links li .sub-menu li:hover a,
+.sidebar .nav-links li .sub-menu li.active a {
+  @apply text-[white];
+}
+.sidebar.sidebar-close .nav-links li .sub-menu {
+  @apply absolute opacity-0 block pointer-events-none transition-[0s] overflow-hidden mt-0 p-0 rounded-[0_6px_6px_0] left-full -top-2.5;
+}
+.sidebar.sidebar-close .nav-links li .sub-menu li {
+  @apply w-[200px] px-[15px] py-1.5 first:pointer-events-none first:hidden;
+}
+.sidebar.sidebar-close .nav-links li:hover .sub-menu {
+  @apply opacity-100 pointer-events-auto transition-all duration-[0.4s] ease-[ease] top-0;
+}
+.sidebar .nav-links li .sub-menu .link_name {
+  @apply hidden;
+}
+.sidebar.sidebar-close .nav-links li .sub-menu .link_name {
+  @apply text-base font-semibold block;
+  /* opacity: 1; */
+}
+
+/* li:first-child contain .link_name */
+.sidebar.sidebar-close .nav-links li .sub-menu li:first-child {
+
+
+}
+.sidebar.sidebar-close .nav-links li .sub-menu li:first-child:hover .link_name,
+.sidebar.sidebar-close
+.nav-links
+li
+.sub-menu
+li:first-child.active
+.link_name {
+  @apply text-gray-100;
+}
+.sidebar .nav-links li .sub-menu.blank {
+  @apply pointer-events-auto opacity-0 pointer-events-none;
+  /* padding: 3px 20px 6px 16px; */
+}
+.sidebar .nav-links li:hover .sub-menu.blank,
+.sidebar .nav-links li.active .sub-menu.blank {
+  @apply -translate-y-2/4 top-2/4;
+}
+.sidebar.sidebar-close ~ .home-section {
+  @apply w-[calc(100%_-_60px)] left-[60px];
+}
+@media (max-width: 420px) {
+  .sidebar.sidebar-close .nav-links li .sub-menu {
+    @apply hidden;
+  }
+}
+/* Add application styles & imports to this file! */
+
+/* Google Fonts Import Link */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  @apply box-border m-0 p-0;
+  font-family: "Poppins", sans-serif;
+}
+.text-sidebar {
+  @apply text-3xl font-semibold text-gray-500 pb-2.5;
+}
+ul {
+  @apply p-0;
 }

@@ -4,14 +4,10 @@
   <div class="flex justify-between items-center px-10 h-14">
     <div class="flex justify-between items-center gap-x-14">
       <div class="w-40">
-        <h2 class="text-md font-bold" href="#">Rabiul Islam</h2>
-        <p class="text-gray-400 text-[12px]">
-          Web Developer
-        </p>
+        <h2 class="text-md font-bold" href="#">MyStock</h2>
+
       </div>
 
-      <a id="toggle-button" class="hidden lg:block bg-gray-200 rounded-full transition-all duration-500 ease-in-out"
-         onclick="collapseSidebar()" href="#"><i class="fa-solid fa-arrow-left p-3"></i></a>
     </div>
 
     <ul class="flex items-center gap-5">
@@ -37,7 +33,7 @@
 <!-- main content -->
 <main class="h-[calc(100vh-120px)] w-full absolute top-14">
   <!-- left sidebar -->
- <app-menu></app-menu>
+<app-menu></app-menu>
   <section id="content"
            class="w-[100wh-60px] lg:w-[100wh-250px] ml-[60px] lg:ml-[240px] p-5 right-0 transition-all duration-500 ease-in-out">
     <router-outlet/>

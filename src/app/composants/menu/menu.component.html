@@ -1,1 +1,33 @@
-<p>menu works!</p>
+<aside id="sidebar" class="sidebar" [class.sidebar-close]="!openSidebar">
+  <div class="flex flex-col justify-between h-full">
+
+    <ul class="nav-links" id="nav-links">
+      <li *ngFor="let item of menuSidebar" #itemEl routerLinkActive="active">
+        <div *ngIf="item.sub_menu.length == 0" class="dropdown-title">
+
+          <a [routerLink]="[item.link]">
+            <i [class]="item.icon"></i>
+            <span class="link_name">{{item.link_name}}</span>
+            <i class="fas fa-spinner fa-spin"></i>
+          </a>
+        </div>
+        <div *ngIf="item.sub_menu.length > 0" class="dropdown-title" (click)="showSubmenu(itemEl)">
+          <a>
+            <i [class]="item.icon"></i>
+            <span class="link_name">{{item.link_name}}</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow'></i>
+        </div>
+        <ul class="sub-menu" [class.blank]="item.sub_menu.length == 0">
+          <li><a class="link_name">{{item.link_name}}</a></li>
+          <li *ngFor="let item_sub of item.sub_menu" routerLinkActive="active">
+            <a [routerLink]="[item_sub.link]">
+              <i [class]="item_sub.icon"></i>
+
+              {{item_sub.link_name}}</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</aside>

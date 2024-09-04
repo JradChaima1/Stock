@@ -10,7 +10,8 @@ import { PageDashboardComponent } from './pages/page-dashboard/page-dashboard.co
 import { PageStatistiquesComponent } from './pages/page-statistiques/page-statistiques.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import {MatIconModule} from "@angular/material/icon";
-import { MenuComponent } from './pages/menu/menu.component';
+import {MenuComponent} from "./composants/menu/menu.component";
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { MenuComponent } from './pages/menu/menu.component';
   imports: [
     BrowserModule,
     MatIconModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [
     provideClientHydration(),
