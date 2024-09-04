@@ -37,7 +37,7 @@ export class MenuComponent {
       sub_menu: [
         {
           link_name: 'Articles',
-          link: '/posts/web-design',
+          link: 'articles',
           icon:'fas fa-boxes',
         },
         {

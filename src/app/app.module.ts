@@ -13,6 +13,8 @@ import {MatIconModule} from "@angular/material/icon";
 import {MenuComponent} from "./composants/menu/menu.component";
 import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './composants/header/header.component';
+import { PageArticleComponent } from './pages/articles/page-article/page-article.component';
+import { DetailArticleComponent } from './composants/detail-article/detail-article.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { HeaderComponent } from './composants/header/header.component';
     PageDashboardComponent,
     PageStatistiquesComponent,
     MenuComponent,
-    HeaderComponent
+    HeaderComponent,
+    PageArticleComponent,
+    DetailArticleComponent
   ],
   imports: [
     BrowserModule,
