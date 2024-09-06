@@ -38,7 +38,8 @@
             ],
             "styles": [
               "src/styles.scss",
-              "src/styles.css",
+              "src/styles.css"
+
 
             ],
             "scripts": ["src/assets/myscript.js"],
@@ -106,6 +107,7 @@
             "styles": [
               "src/styles.scss",
               "src/styles.css"
+
 
             ],
             "scripts": []

@@ -2,29 +2,23 @@
   <div class="flex flex-col justify-between h-full">
 
     <ul class="nav-links" id="nav-links">
-      <li *ngFor="let item of menuSidebar" #itemEl routerLinkActive="active">
-        <div *ngIf="item.sub_menu.length == 0" class="dropdown-title">
+      <li *ngFor="let item of menuProperties" #itemEl routerLinkActive="active">
 
-          <a [routerLink]="[item.link]">
-            <i [class]="item.icon"></i>
-            <span class="link_name">{{item.link_name}}</span>
-            <i class="fas fa-spinner fa-spin"></i>
-          </a>
-        </div>
-        <div *ngIf="item.sub_menu.length > 0" class="dropdown-title" (click)="showSubmenu(itemEl)">
+        <div  class="dropdown-title" (click)="showSubmenu(itemEl)">
           <a>
+
             <i [class]="item.icon"></i>
-            <span class="link_name">{{item.link_name}}</span>
+            <span class="link_name">{{item.titre}}</span>
           </a>
           <i class='bx bxs-chevron-down arrow'></i>
         </div>
-        <ul class="sub-menu" [class.blank]="item.sub_menu.length == 0">
-          <li><a class="link_name">{{item.link_name}}</a></li>
-          <li *ngFor="let item_sub of item.sub_menu" routerLinkActive="active">
-            <a [routerLink]="[item_sub.link]">
+        <ul class="sub-menu" [class.blank]="item.sousMenu?.length == 0">
+          <li><a class="link_name">{{item.titre}}</a></li>
+          <li *ngFor="let item_sub of item.sousMenu" routerLinkActive="active">
+            <a href="javascript:void(0);" (click)="navigate(item_sub)">
               <i [class]="item_sub.icon"></i>
 
-              {{item_sub.link_name}}</a>
+              {{item_sub.titre}}</a>
           </li>
         </ul>
       </li>

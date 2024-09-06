@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {Menu} from "./menu";
 import {Router} from '@angular/router';
 
+
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
@@ -11,101 +12,126 @@ export class MenuComponent {
   openSidebar: boolean = true;
 
   // @ts-ignore
-  menuSidebar = [
-
+  public menuProperties: Array<Menu> = [
     {
-      link_name: 'Tableau de bord',
-      link: null,
-      icon: 'fas fa-chart-line',
-      sub_menu: [
+      id: '1',
+      titre: 'Tableau de bord',
+      icon: 'fa-solid fa-chart-line',
+      url: '',
+      sousMenu: [
         {
-          link_name: 'Vue d\'ensemble',
-          link: '/html-n-css',
-          icon: 'fas fa-chart-pie'
+          id: '11',
+          titre: 'Vue d\'ensemble',
+          icon: 'fas fa-chart-pie',
+          url: ''
         },
         {
-          link_name: 'Statistiques',
-          link: 'statistiques',
-          icon: 'fas fa-chart-bar'
-        },
-      ],
+          id: '12',
+          titre: 'Statistiques',
+          icon: 'fas fa-chart-bar',
+          url: 'statistiques'
+        }
+      ]
     },
     {
-      link_name: 'Articles',
-      link: null,
+      id: '2',
+      titre: 'Articles',
       icon: 'fas fa-boxes',
-      sub_menu: [
+      url: '',
+      sousMenu: [
         {
-          link_name: 'Articles',
-          link: 'articles',
-          icon:'fas fa-boxes',
+          id: '21',
+          titre: 'Articles',
+          icon: 'fas fa-boxes',
+          url: 'articles'
         },
         {
-          link_name: 'Mouvements du stock',
-          link: '/posts/login-form',
-          icon:'fab fa-stack-overflow'
+          id: '22',
+          titre: 'Mouvements du stock',
+          icon: 'fab fa-stack-overflow',
+          url: 'mvtstk'
         }
-      ],
+      ]
     },
     {
-      link_name: 'Clients',
-      link: null,
+      id: '3',
+      titre: 'Clients',
       icon: 'fas fa-users',
-      sub_menu: [
+      url: '',
+      sousMenu: [
         {
-          link_name: 'Clients',
-          link: '/posts/web-design',
-          icon:'fas fa-users',
+          id: '31',
+          titre: 'Clients',
+          icon: 'fas fa-users',
+          url: 'clients'
         },
         {
-          link_name: 'Commandes clients',
-          link: '/posts/login-form',
-          icon:'fas fa-shopping-basket'
+          id: '32',
+          titre: 'Commandes clients',
+          icon: 'fas fa-shopping-basket',
+          url: 'commandesclient'
         }
-      ],
+      ]
     },
     {
-      link_name: 'Fournisseurs',
-      link: null,
+      id: '4',
+      titre: 'Fournisseurs',
       icon: 'fas fa-users',
-      sub_menu: [
+      url: '',
+      sousMenu: [
         {
-          link_name: 'Fournisseurs',
-          link: '/posts/web-design',
-          icon:'fas fa-users',
+          id: '41',
+          titre: 'Fournisseurs',
+          icon: 'fas fa-users',
+          url: 'fournisseurs'
         },
         {
-          link_name: 'Commandes fournisseurs',
-          link: '/posts/login-form',
-          icon:'fas fa-truck'
+          id: '42',
+          titre: 'Commandes fournisseurs',
+          icon: 'fas fa-truck',
+          url: 'commandesfournisseur'
         }
-      ],
+      ]
     },
     {
-      link_name: 'Parametrages',
-      link: null,
+      id: '5',
+      titre: 'Parametrages',
       icon: 'fas fa-cogs',
-      sub_menu: [
+      url: '',
+      sousMenu: [
         {
-          link_name: 'Categories',
-          link: '/posts/web-design',
-          icon:'fas fa-tools',
+          id: '51',
+          titre: 'Categories',
+          icon: 'fas fa-tools',
+          url: 'categories'
         },
         {
-          link_name: 'Utilisateurs',
-          link: '/posts/login-form',
-          icon:'fas fa-users-cog'
+          id: '52',
+          titre: 'Utilisateurs',
+          icon: 'fas fa-users-cog',
+          url: 'utilisateurs'
         }
-      ],
+      ]
     }
-
   ];
-
-  constructor() {}
+  private lastSelectedMenu: Menu | undefined;
+  constructor(
+    private router: Router
+  ) {}
 
   ngOnInit() {}
 
   showSubmenu(itemEl: HTMLElement) {
     itemEl.classList.toggle('showMenu');
   }
+  navigate(menu: Menu): void {
+    if (this.lastSelectedMenu) {
+      this.lastSelectedMenu.active = false;
+    }
+    menu.active = true;
+    this.lastSelectedMenu = menu;
+    this.router.navigate([menu.url]);
+  }
+
+
 }

@@ -1,3 +1,5 @@
+
+
 /*
   Based on TailwindCSS recommendations,
   consider using classes instead of the `@apply` directive
@@ -179,6 +181,7 @@ li:first-child.active
 
 /* Google Fonts Import Link */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@import "../node_modules/font-awesome/css/font-awesome.css";
 * {
   @apply box-border m-0 p-0;
   font-family: "Poppins", sans-serif;
