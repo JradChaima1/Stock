@@ -1,0 +1,36 @@
+
+<mat-expansion-panel  hideToggle >
+  <mat-expansion-panel-header  [collapsedHeight]="'100px'" [expandedHeight]="'100px'" >
+    <mat-panel-title >
+      <div class="flex items-center gap-x-2">
+        <img class="object-cover w-8 h-8 rounded-full" ngSrc="assets/ready-stock.png" alt="" height="512" width="512">
+        <div>
+          <p class="text-xs font-bold text-gray-800 dark:text-white ">Code Article</p>
+          <p class="text-xs font-bold text-gray-600 dark:text-gray-400">Designation</p>
+        </div>
+      </div>
+    </mat-panel-title>
+    <mat-panel-description class="flex justify-between">
+      <div>
+        <p class="text-xs font-bold text-gray-800 dark:text-white ">Stock Actuel</p>
+        <p class="text-xs font-bold text-gray-600 dark:text-gray-400">139</p>
+
+      </div>
+      <div class="flex gap-x-2">
+        <button  class="text-cyan-600 transition-colors duration-200 dark:hover:text-indigo-500 dark:text-gray-300  focus:outline-none" routerLink="/statistiques">
+          Correction du stock
+        </button>
+        <fa-icon class="text-cyan-600" [icon]="faPenToSquare"></fa-icon>
+      </div>
+
+    </mat-panel-description>
+
+  </mat-expansion-panel-header>
+<app-detail-mvt-stk></app-detail-mvt-stk>
+  <app-detail-mvt-stk></app-detail-mvt-stk>
+  <app-detail-mvt-stk></app-detail-mvt-stk>
+</mat-expansion-panel>
+
+
+
+

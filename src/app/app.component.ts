@@ -3,6 +3,7 @@ import {MatIconModule} from "@angular/material/icon";
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -16,4 +17,5 @@ export class AppComponent {
   constructor(){
 
   }
+
 }

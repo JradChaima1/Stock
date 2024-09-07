@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
-
+import {AlertModule} from "@coreui/angular";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MonPremierComposantComponent } from './mon-premier-composant/mon-premier-composant.component';
@@ -20,6 +20,18 @@ import { PaginationComponent } from './composants/pagination/pagination.componen
 import { BoutonActionComponent } from './composants/bouton-action/bouton-action.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NouvelArticleComponent } from './pages/articles/nouvel-article/nouvel-article.component';
+import { DetailMvtStkArticleComponent } from './composants/detail-mvt-stk-article/detail-mvt-stk-article.component';
+import { PageMvtstkComponent } from './pages/page-mvtstk/page-mvtstk.component';
+import {AccordionModule} from "primeng/accordion";
+import {AvatarModule} from "primeng/avatar";
+import {BadgeModule} from "primeng/badge";
+
+import {MatTableModule} from '@angular/material/table';
+
+import {MatPaginatorModule} from '@angular/material/paginator';
+import { MatButtonModule } from '@angular/material/button';
+import {MatExpansionModule} from "@angular/material/expansion";
+import { DetailMvtStkComponent } from './composants/detail-mvt-stk/detail-mvt-stk.component';
 
 
 @NgModule({
@@ -44,11 +56,25 @@ import { NouvelArticleComponent } from './pages/articles/nouvel-article/nouvel-a
     AppRoutingModule,
     FormsModule,
     NgOptimizedImage,
-    FontAwesomeModule
+    FontAwesomeModule,
+    AccordionModule,
+    AvatarModule,
+    BadgeModule,
+    AlertModule,
+    DetailMvtStkArticleComponent,
+    PageMvtstkComponent,
+    MatTableModule,
+    MatPaginatorModule,
+    MatButtonModule,
+    MatExpansionModule,
+    DetailMvtStkComponent
   ],
   providers: [
     provideClientHydration(),
     provideAnimationsAsync()
+  ],
+  exports: [
+    DetailMvtStkComponent
   ],
   bootstrap: [AppComponent]
 })

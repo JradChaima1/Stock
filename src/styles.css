@@ -1,4 +1,5 @@
-
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
 
 /*
   Based on TailwindCSS recommendations,
@@ -8,7 +9,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 .menu-container {
   @apply w-[200px] text-xl;
   background: #04aa6d;
