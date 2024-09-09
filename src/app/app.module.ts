@@ -40,6 +40,7 @@ import { DetailCmdCltFrsComponent } from './composants/detail-cmd-clt-frs/detail
 import { PageCmdCltFrsComponent } from './pages/page-cmd-clt-frs/page-cmd-clt-frs.component';
 import { DetailCmdFrsArticleComponent } from './composants/detail-cmd-frs-article/detail-cmd-frs-article.component';
 import { NouvelleCmdCltFrsComponent } from './composants/nouvelle-cmd-clt-frs/nouvelle-cmd-clt-frs.component';
+import { PageCategoriesComponent } from './pages/categories/page-categories/page-categories.component';
 
 
 @NgModule({
@@ -62,7 +63,8 @@ import { NouvelleCmdCltFrsComponent } from './composants/nouvelle-cmd-clt-frs/no
     DetailCltFrsComponent,
     PageFournisseurComponent,
     NouveauCltFrsComponent,
-    NouvelleCmdCltFrsComponent
+    NouvelleCmdCltFrsComponent,
+    PageCategoriesComponent
   ],
   imports: [
     BrowserModule,
