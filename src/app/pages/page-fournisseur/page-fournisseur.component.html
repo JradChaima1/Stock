@@ -1,7 +1,7 @@
 <div class="flex justify-between">
-  <h1 class="text-lg font-bold text-gray-900 ">Liste des articles</h1>
+  <h1 class="text-lg font-bold text-gray-900 ">Liste des fournisseurs</h1>
   <div class="flex gap-x-2 justify-end">
-    <button type="button" (click)="nouveauArticle()" class="text-white bg-[#1da1f2]  focus:ring-4 focus:outline-none focus:ring-[#1da1f2]/50 rounded-lg text-sm md:px-3 md:py-2 px-2 py-1 text-center inline-flex items-center dark:focus:ring-[#1da1f2]/55 me-2 mb-2">
+    <button type="button" (click)="nouveauFournisseur()" class="text-white bg-[#1da1f2]  focus:ring-4 focus:outline-none focus:ring-[#1da1f2]/50 rounded-lg text-sm md:px-3 md:py-2 px-2 py-1 text-center inline-flex items-center dark:focus:ring-[#1da1f2]/55 me-2 mb-2">
       <fa-icon class="w-4 h-4 me-2 mb-1" [icon]="faPlus"></fa-icon>
       Nouveau
     </button>
@@ -17,20 +17,21 @@
 </div>
 
 <div class="overflow-hidden border border-gray-200 dark:border-gray-700 md:rounded-lg">
-          <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
+  <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
 
-            <tbody class="bg-white divide-y divide-gray-200 dark:divide-gray-700 dark:bg-gray-900">
-            <tr app-detail-article>
+    <tbody class="bg-white divide-y divide-gray-200 dark:divide-gray-700 dark:bg-gray-900">
+    <tr app-detail-clt-frs>
 
-            </tr>
-            <tr app-detail-article>
+    </tr>
+    <tr app-detail-clt-frs>
 
-            </tr>
-            <tr app-detail-article>
+    </tr>
+    <tr app-detail-clt-frs>
 
-            </tr>
-            </tbody>
-          </table>
+    </tr>
+    </tbody>
+  </table>
 
 </div>
+
 

@@ -1,0 +1,58 @@
+
+<mat-expansion-panel  hideToggle >
+  <mat-expansion-panel-header  [collapsedHeight]="'90px'" [expandedHeight]="'90px'" >
+    <mat-panel-title >
+
+      <div class="flex items-center gap-x-2">
+        <img class="object-cover w-8 h-8 rounded-full" ngSrc="assets/user.png" alt="" height="512" width="512">
+        <div>
+          <p class="text-xs font-bold text-gray-800 dark:text-white ">Nom</p>
+          <p class="text-xs font-bold text-gray-600 dark:text-gray-400">Prenom</p>
+          <p class="text-xs font-bold text-gray-600 dark:text-gray-400">Telephone</p>
+        </div>
+      </div>
+
+
+    </mat-panel-title>
+    <mat-panel-description class="flex justify-between">
+      <div class="flex  justify-items-center gap-x-1 ">
+        <fa-icon class="text-gray-900" [icon]="faQrcode"></fa-icon>
+        <p class="text-xs font-bold text-gray-800 dark:text-white ">CMD</p>
+      </div>
+      <div class="flex  justify-items-center gap-x-1 ">
+        <fa-icon class="text-gray-900 " [icon]="faCalendar"></fa-icon>
+        <p class="text-xs font-bold text-gray-800 dark:text-white ">Date</p>
+      </div>
+      <div class="flex  justify-items-center gap-x-1 ">
+        <fa-icon class="text-gray-900 " [icon]="faCartArrowDown"></fa-icon>
+        <p class="text-xs font-bold text-gray-800 dark:text-white">Livree</p>
+      </div>
+
+      <div class="flex gap-x-2">
+        <button  class="text-cyan-600 transition-colors duration-200 dark:hover:text-indigo-500 hover:text-undeline dark:text-gray-300  focus:outline-none">
+          Modifier
+        </button>
+        <fa-icon class="text-cyan-600" [icon]="faPenToSquare"></fa-icon>
+      </div>
+      <div class="flex gap-x-2">
+        <button  class=" text-red-500 transition-colors duration-200 dark:hover:text-indigo-500 hover:text-undeline dark:text-gray-300  focus:outline-none">
+        Supprimer
+        </button>
+        <fa-icon class="text-red-500" [icon]="faTrash"></fa-icon>
+      </div>
+    </mat-panel-description>
+
+
+  </mat-expansion-panel-header>
+  <app-detail-cmd-frs-article></app-detail-cmd-frs-article>
+  <app-detail-cmd-frs-article></app-detail-cmd-frs-article>
+  <app-detail-cmd-frs-article></app-detail-cmd-frs-article>
+
+</mat-expansion-panel>
+<div class="flex justify-between border border-gray-200 dark:border-gray-700 bg-neutral-200">
+  <p>12 articles</p>
+  <p>Total commade:200</p>
+</div>
+
+
+

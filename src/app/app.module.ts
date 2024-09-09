@@ -22,9 +22,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NouvelArticleComponent } from './pages/articles/nouvel-article/nouvel-article.component';
 import { DetailMvtStkArticleComponent } from './composants/detail-mvt-stk-article/detail-mvt-stk-article.component';
 import { PageMvtstkComponent } from './pages/page-mvtstk/page-mvtstk.component';
-import {AccordionModule} from "primeng/accordion";
-import {AvatarModule} from "primeng/avatar";
-import {BadgeModule} from "primeng/badge";
+
 
 import {MatTableModule} from '@angular/material/table';
 
@@ -32,6 +30,16 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import { MatButtonModule } from '@angular/material/button';
 import {MatExpansionModule} from "@angular/material/expansion";
 import { DetailMvtStkComponent } from './composants/detail-mvt-stk/detail-mvt-stk.component';
+import { DialogContentComponent } from './composants/dialog-content/dialog-content.component';
+import {MatDialogActions, MatDialogClose, MatDialogContent, MatDialogTitle} from "@angular/material/dialog";
+import { PageClientComponent } from './pages/page-client/page-client.component';
+import { DetailCltFrsComponent } from './composants/detail-clt-frs/detail-clt-frs.component';
+import { PageFournisseurComponent } from './pages/page-fournisseur/page-fournisseur.component';
+import { NouveauCltFrsComponent } from './composants/nouveau-clt-frs/nouveau-clt-frs.component';
+import { DetailCmdCltFrsComponent } from './composants/detail-cmd-clt-frs/detail-cmd-clt-frs.component';
+import { PageCmdCltFrsComponent } from './pages/page-cmd-clt-frs/page-cmd-clt-frs.component';
+import { DetailCmdFrsArticleComponent } from './composants/detail-cmd-frs-article/detail-cmd-frs-article.component';
+import { NouvelleCmdCltFrsComponent } from './composants/nouvelle-cmd-clt-frs/nouvelle-cmd-clt-frs.component';
 
 
 @NgModule({
@@ -48,7 +56,13 @@ import { DetailMvtStkComponent } from './composants/detail-mvt-stk/detail-mvt-st
     DetailArticleComponent,
     PaginationComponent,
     BoutonActionComponent,
-    NouvelArticleComponent
+    NouvelArticleComponent,
+    DialogContentComponent,
+    PageClientComponent,
+    DetailCltFrsComponent,
+    PageFournisseurComponent,
+    NouveauCltFrsComponent,
+    NouvelleCmdCltFrsComponent
   ],
   imports: [
     BrowserModule,
@@ -57,9 +71,6 @@ import { DetailMvtStkComponent } from './composants/detail-mvt-stk/detail-mvt-st
     FormsModule,
     NgOptimizedImage,
     FontAwesomeModule,
-    AccordionModule,
-    AvatarModule,
-    BadgeModule,
     AlertModule,
     DetailMvtStkArticleComponent,
     PageMvtstkComponent,
@@ -67,7 +78,14 @@ import { DetailMvtStkComponent } from './composants/detail-mvt-stk/detail-mvt-st
     MatPaginatorModule,
     MatButtonModule,
     MatExpansionModule,
-    DetailMvtStkComponent
+    DetailMvtStkComponent,
+    MatDialogActions,
+    MatDialogClose,
+    MatDialogContent,
+    MatDialogTitle,
+    DetailCmdCltFrsComponent,
+    PageCmdCltFrsComponent,
+    DetailCmdFrsArticleComponent
   ],
   providers: [
     provideClientHydration(),

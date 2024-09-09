@@ -1,5 +1,4 @@
-@import "primeng/resources/themes/lara-light-blue/theme.css";
-@import "primeng/resources/primeng.css";
+
 
 /*
   Based on TailwindCSS recommendations,
@@ -192,3 +191,13 @@ li:first-child.active
 ul {
   @apply p-0;
 }
+.bt{
+  @apply text-white bg-[#1da1f2];
+}
+.example-button-row button,
+.example-button-row a {
+  margin-right: 8px;
+}
+
+/* Success syling */
+
