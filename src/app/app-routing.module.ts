@@ -17,6 +17,7 @@ import { PageCategoriesComponent } from './pages/categories/page-categories/page
 import { NouvelCategorieComponent } from './pages/categories/nouvel-categorie/nouvel-categorie.component';
 import { PageUtilisateurComponent } from './pages/utilisateur/page-utilisateur/page-utilisateur.component';
 import { NouvelUtilisateurComponent } from './pages/utilisateur/nouvel-utilisateur/nouvel-utilisateur.component';
+import { PageProfilComponent } from './pages/profil/page-profil/page-profil.component';
 
 const routes: Routes = [
   {
@@ -95,7 +96,10 @@ const routes: Routes = [
         path:'nouvelutilisateur',
         component:NouvelUtilisateurComponent
       },
-      
+      {
+        path:'pageprofil',
+        component:PageProfilComponent
+      },
       
 
 

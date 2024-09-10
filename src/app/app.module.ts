@@ -45,6 +45,7 @@ import { NouvelCategorieComponent } from './pages/categories/nouvel-categorie/no
 import { PageUtilisateurComponent } from './pages/utilisateur/page-utilisateur/page-utilisateur.component';
 import { DetailUtilisateurComponent } from './composants/detail-utilisateur/detail-utilisateur.component';
 import { NouvelUtilisateurComponent } from './pages/utilisateur/nouvel-utilisateur/nouvel-utilisateur.component';
+import { PageProfilComponent } from './pages/profil/page-profil/page-profil.component';
 
 
 @NgModule({
@@ -72,7 +73,8 @@ import { NouvelUtilisateurComponent } from './pages/utilisateur/nouvel-utilisate
     NouvelCategorieComponent,
     PageUtilisateurComponent,
     DetailUtilisateurComponent,
-    NouvelUtilisateurComponent
+    NouvelUtilisateurComponent,
+    PageProfilComponent
   ],
   imports: [
     BrowserModule,
