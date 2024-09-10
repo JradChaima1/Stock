@@ -14,6 +14,9 @@ import {NouveauCltFrsComponent} from "./composants/nouveau-clt-frs/nouveau-clt-f
 import {PageCmdCltFrsComponent} from "./pages/page-cmd-clt-frs/page-cmd-clt-frs.component";
 import {NouvelleCmdCltFrsComponent} from "./composants/nouvelle-cmd-clt-frs/nouvelle-cmd-clt-frs.component";
 import { PageCategoriesComponent } from './pages/categories/page-categories/page-categories.component';
+import { NouvelCategorieComponent } from './pages/categories/nouvel-categorie/nouvel-categorie.component';
+import { PageUtilisateurComponent } from './pages/utilisateur/page-utilisateur/page-utilisateur.component';
+import { NouvelUtilisateurComponent } from './pages/utilisateur/nouvel-utilisateur/nouvel-utilisateur.component';
 
 const routes: Routes = [
   {
@@ -80,6 +83,20 @@ const routes: Routes = [
         path:'categories',
         component:PageCategoriesComponent
       },
+      {
+        path:'nouvelcategorie',
+        component:NouvelCategorieComponent
+      },
+      {
+        path:'utilisateurs',
+        component:PageUtilisateurComponent
+      },
+      {
+        path:'nouvelutilisateur',
+        component:NouvelUtilisateurComponent
+      },
+      
+      
 
 
     ]

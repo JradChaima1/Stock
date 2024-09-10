@@ -1,0 +1,45 @@
+<td class="px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
+  <div class="flex items-center gap-x-2">
+      <img class="object-cover w-8 h-8 rounded-full" src="assets/user.png" alt="">
+      <div>
+        <p class="text-xs font-normal text-gray-600 dark:text-gray-400">Nom</p>
+          <p class="text-xs font-normal text-gray-600 dark:text-gray-400">Prenom</p>
+      </div>
+  </div>
+</td>
+
+
+<td class="px-8 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
+  <div>
+    <p class="text-sm font-medium text-gray-800 dark:text-white ">Telephone</p>
+    <p class="text-xs font-normal text-gray-600 dark:text-gray-400">Address</p>
+</div>
+</td>
+<td class="px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">
+  <div>
+    <p class="text-sm font-medium text-gray-800 dark:text-white">Ville</p>
+    <p class="text-xs font-normal text-gray-600 dark:text-gray-400">Pays</p>
+</div>
+</td>
+<td class="px-4 py-4 text-sm whitespace-nowrap">
+  <div class="flex items-center gap-x-6">
+    <div class="flex gap-x-2">
+      <button class="text-cyan-600 transition-colors duration-200 dark:hover:text-indigo-500 dark:text-gray-300  focus:outline-none">
+        Modifier
+      </button>
+      <fa-icon class="text-cyan-600" [icon]="faPenToSquare"></fa-icon>
+    </div>
+    <div class="flex gap-x-2">
+      <button class="text-cyan-600 transition-colors duration-200 dark:hover:text-indigo-500 dark:text-gray-300  focus:outline-none">
+        Details
+      </button>
+      <fa-icon class="text-cyan-600" [icon]="faCircleInfo"></fa-icon>
+    </div>
+    <div class="flex gap-x-2">
+      <button class="text-red-500 transition-colors duration-200  focus:outline-none">
+        Supprimer
+      </button>
+      <fa-icon class="text-red-500" [icon]="faTrash"></fa-icon>
+    </div>
+  </div>
+</td>
