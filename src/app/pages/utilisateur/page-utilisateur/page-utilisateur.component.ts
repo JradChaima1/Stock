@@ -15,7 +15,8 @@ export class PageUtilisateurComponent {
   protected readonly faFileExport = faFileExport;
   protected readonly faCloudArrowUp = faCloudArrowUp;
 
-  nouveauUtilisateur(): void {
+  nouveaUtilisateur(): void {
     this.router.navigate(['nouvelutilisateur']);
   }
+  
 }

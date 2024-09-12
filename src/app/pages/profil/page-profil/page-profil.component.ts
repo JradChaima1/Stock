@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { faPenToSquare } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-page-profil',
@@ -8,4 +9,11 @@ import { faPenToSquare } from '@fortawesome/free-solid-svg-icons';
 export class PageProfilComponent {
   
   protected readonly faPenToSquare = faPenToSquare;
+  constructor(
+    private router: Router,
+
+  ) { }
+  changepassword(): void {
+    this.router.navigate(['changepassword']);
+  }
 }

@@ -10,7 +10,7 @@ export class NouvelUtilisateurComponent {
     private router: Router,
 
   ) { }
-  nouveauUtilisateur(): void {
-    this.router.navigate(['nouveauu']);
+  cancel(): void {
+    this.router.navigate(['utilisateurs']);
   }
 }
