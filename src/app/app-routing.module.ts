@@ -58,27 +58,53 @@ const routes: Routes = [
       },
       {
         path: 'fournisseurs',
-        component: PageFournisseurComponent
+        component: PageFournisseurComponent,
+        data: {
+          origin: 'fournisseur'
+        }
       },
+   
       {
         path: 'nouveaufournisseur',
-        component: NouveauCltFrsComponent
+        component: NouveauCltFrsComponent,
+        data: {
+          origin: 'fournisseur'
+        }      
       },
       {
         path: 'nouveauclient',
-        component: NouveauCltFrsComponent
+        component: NouveauCltFrsComponent,
+        data: {
+          origin: 'client'
+        }
       },
       {
         path:'commandesclient',
-        component:PageCmdCltFrsComponent
+        component:PageCmdCltFrsComponent,
+        data: {
+          origin: 'client'
+        }
       },
       {
         path:'commandesfournisseur',
-        component:PageCmdCltFrsComponent
+        component:PageCmdCltFrsComponent,
+        data: {
+          origin: 'fournisseur'
+        }
       },
       {
-        path:'nouvelllecmdcltfrs',
-        component:NouvelleCmdCltFrsComponent
+        path:'nouvellecmdclt',
+        component:NouvelleCmdCltFrsComponent,
+        data: {
+          origin: 'client'
+        }
+      },
+      {
+        path:'nouvellecmdfrs',
+        component:NouvelleCmdCltFrsComponent,
+        data: {
+          origin: 'fournisseur'
+        }
       },
       {
         path:'categories',
@@ -100,12 +126,13 @@ const routes: Routes = [
         path:'pageprofil',
         component:PageProfilComponent
       },
-      
+  
 
 
     ]
   }
   ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
